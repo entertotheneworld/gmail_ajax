@@ -1,0 +1,10 @@
+
+document.getElementById("<%=@email.id%>").classList.add("unread");
+
+if (<%=@email.read%> == true){
+  document.getElementById("notRead<%=@email.id%>").textContent = "Marquer comme non-lu"
+} else {
+    document.getElementById("notRead<%=@email.id%>").textContent = "Marquer comme lu"
+}
+
+console.log(<%=@email.read%>);

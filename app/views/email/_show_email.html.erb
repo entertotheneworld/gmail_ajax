@@ -1,0 +1,11 @@
+<div class="title">
+    <h1><%= email.object %></h1>
+</div>
+<div class="description">
+  <%= email.body %>
+</div>
+<div>
+    <%= link_to "Supprimer", email_path(email.id), :method => :delete, remote: true, class: "btn btn-danger btn-block", style: "color:white"%>
+    <a id="notRead<%=email.id%>" class="btn btn-primary" style="color:white" data-method="PUT" data-remote="true" href="<%=email_path(email.id)%>">Marquer comme non-lu</a>
+
+</div>

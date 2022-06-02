@@ -1,0 +1,39 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container bootdey">
+<div class="email-app mb-4">
+    <nav>
+        <%= link_to "Recevoir un email", email_index_path, :method => :post, remote: true, class: "btn btn-danger btn-block" %>
+
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa fa-inbox"></i> Inbox <span class="badge badge-danger">4</span></a>
+            </li>
+        </ul>
+
+        <main class="inbox">
+            <ul class="messages ">
+                <% @emails.each do  |email| %>
+                <li class="message unread" id="<%=email.id%>">
+
+                    <div class="actions">
+                        <span class="action"><i class="fa fa-square-o"></i></span>
+                    </div>
+
+                    <div class="title">
+
+                        <%= link_to email.object, email_path(email.id), remote: true, class: "test" %>
+                    </div>
+
+
+                </li>
+                <% end%>
+            </ul>
+        </main>
+    </nav>
+
+    <div class="show">
+
+    </div>
+    
+</div>
+</div>

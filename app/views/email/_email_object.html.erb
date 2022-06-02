@@ -1,0 +1,14 @@
+
+
+<li class="message unread" id="<%=email.id%>">
+
+    <div class="actions">
+        <span class="action"><i class="fa fa-square-o"></i></span>
+    </div>
+
+    <div class="title">
+        <%= link_to email.object, email_path(email.id), remote: true %>
+    </div>
+
+
+</li>
